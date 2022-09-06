@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.dericksm</groupId>
+        <artifactId>store-microservices-webflux-sse</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>user-service-dto</module>
+        <module>user-service-server</module>
+    </modules>
+
+    <groupId>com.github.dericksm</groupId>
+    <artifactId>user-service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>user-service</name>
+    <description>user-service</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>h2</groupId>
+            <artifactId>h2</artifactId>
+            <version>0.2.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>clojars</id>
+            <name>Clojars</name>
+            <url>https://repo.clojars.org/</url>
+        </repository>
+    </repositories>
+
+</project>
