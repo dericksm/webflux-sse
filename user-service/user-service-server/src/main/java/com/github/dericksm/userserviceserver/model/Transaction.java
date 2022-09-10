@@ -4,7 +4,9 @@ import com.github.dericksm.userservicedto.TransactionStatus;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Data
@@ -15,6 +17,7 @@ public class Transaction {
     private Integer id;
     private Integer userId;
     private BigDecimal amount;
+    @CreatedDate
     private LocalDateTime createdAt;
     private TransactionStatus status;
 

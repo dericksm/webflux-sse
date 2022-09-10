@@ -24,9 +24,8 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     public Mono<Transaction> save(Transaction transaction) {
         return userService.updateBalance(transaction.getUserId(), transaction.getAmount())
-                          .filter(Boolean::booleanValue)
                           .flatMap(b -> {
-                              transaction.setStatus(TransactionStatus.APPROVED);
+                              transaction.setStatus(b ? TransactionStatus.APPROVED : TransactionStatus.DECLINED);
                               return transactionRepository.save(transaction);
                           });
     }

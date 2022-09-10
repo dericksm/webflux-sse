@@ -53,9 +53,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Mono<Boolean> updateBalance(Integer id, BigDecimal chargeAmount){
         return getById(id)
-            .doOnSuccess(user -> userRepository.updateBalance(id, chargeAmount).subscribe())
-            .flatMap(user -> Mono.just(Boolean.TRUE))
-            .defaultIfEmpty(Boolean.FALSE);
+            .flatMap(user -> userRepository.updateBalance(id, chargeAmount));
     }
 
 }
