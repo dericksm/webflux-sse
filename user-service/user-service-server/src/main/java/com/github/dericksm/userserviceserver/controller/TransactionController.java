@@ -1,8 +1,8 @@
 package com.github.dericksm.userserviceserver.controller;
 
+import com.github.dericksm.userservicedto.TransactionDTO;
 import com.github.dericksm.userservicedto.request.TransactionRequest;
 import com.github.dericksm.userserviceserver.mapper.TransactionMapper;
-import com.github.dericksm.userserviceserver.model.Transaction;
 import com.github.dericksm.userserviceserver.service.interfaces.TransactionService;
 import com.github.dericksm.userserviceserver.service.interfaces.UserService;
 import javax.validation.Valid;
@@ -26,8 +26,10 @@ public class TransactionController {
     }
 
     @PostMapping
-    public Mono<Transaction> save(@RequestBody @Valid TransactionRequest request){
-        return transactionService.save(transactionMapper.toTransaction(request));
+    public Mono<TransactionDTO> save(@RequestBody @Valid TransactionRequest request) {
+        return transactionService
+            .save(transactionMapper.toTransaction(request))
+            .map(transactionMapper::toDTO);
     }
 
 }

@@ -14,6 +14,7 @@
     <modules>
         <module>user-service-dto</module>
         <module>user-service-server</module>
+        <module>user-service-client</module>
     </modules>
 
     <groupId>com.github.dericksm</groupId>
