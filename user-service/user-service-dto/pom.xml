@@ -21,12 +21,6 @@
             <artifactId>hibernate-validator</artifactId>
             <version>6.2.3.Final</version>
         </dependency>
-        <dependency>
-            <groupId>h2</groupId>
-            <artifactId>h2</artifactId>
-            <version>0.2.0</version>
-            <scope>compile</scope>
-        </dependency>
     </dependencies>
 
 </project>
