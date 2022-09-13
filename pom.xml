@@ -16,6 +16,12 @@
     <description>store-microservices-webflux-sse</description>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>product-service</module>
+        <module>order-service</module>
+        <module>user-service</module>
+    </modules>
+
     <properties>
         <java.version>17</java.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
