@@ -23,12 +23,6 @@
         </dependency>
         <dependency>
             <groupId>com.github.dericksm</groupId>
-            <artifactId>product-service-dto</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.dericksm</groupId>
             <artifactId>user-service-dto</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
