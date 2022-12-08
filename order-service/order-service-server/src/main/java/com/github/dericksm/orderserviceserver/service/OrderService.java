@@ -6,7 +6,7 @@ import reactor.core.publisher.Mono;
 
 public interface OrderService {
 
-    Flux<Order> findOrdersByUserId(String userId);
+    Flux<Order> findOrdersByUserId(Integer userId);
     Mono<Order> create(Order order);
 
 }

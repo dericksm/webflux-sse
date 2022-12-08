@@ -4,6 +4,7 @@ import com.github.dericksm.orderservicedto.OrderStatus;
 import java.math.BigDecimal;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import lombok.Data;
@@ -16,7 +17,7 @@ import lombok.ToString;
 public class Order {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String productId;
     private Integer userId;

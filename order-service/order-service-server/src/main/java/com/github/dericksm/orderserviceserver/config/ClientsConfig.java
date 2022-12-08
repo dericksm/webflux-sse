@@ -10,7 +10,7 @@ public class ClientsConfig {
 
     @Bean
     public ProductServiceClient productServiceClient(){
-        return new ProductServiceClient("http://localhost:8080/");
+        return new ProductServiceClient("http://localhost:8080/products/");
     }
 
     @Bean

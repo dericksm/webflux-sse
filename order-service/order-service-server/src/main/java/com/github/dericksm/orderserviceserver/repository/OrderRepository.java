@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Integer> {
 
-    List<Order> findOrdersByUserId(String userId);
+    List<Order> findOrdersByUserId(Integer userId);
 
 }

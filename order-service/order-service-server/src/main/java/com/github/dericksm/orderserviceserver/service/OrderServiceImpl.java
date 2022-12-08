@@ -17,7 +17,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Flux<Order> findOrdersByUserId(String userId) {
+    public Flux<Order> findOrdersByUserId(Integer userId) {
         return Flux.fromStream(() -> orderRepository.findOrdersByUserId(userId).stream())
                    .subscribeOn(Schedulers.boundedElastic());
     }
